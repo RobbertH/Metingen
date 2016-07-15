@@ -1,0 +1,48 @@
+\documentclass{article}
+%\usepackage[utf8]{inputenc}
+
+
+%\usepackage[A4, portrait, margin=1.5in]{geometry}
+
+
+
+\title{Least Squares}
+\author{Robbert Hofman}
+\date{July 2016}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+hum: humidity measured by gehaka; cycles: cycles measured by our meter
+
+\begin{center}
+\begin{tabular}{ c c c }
+\hline
+ Sample number & Cycles & Humidity \\ 
+\hline
+ 0 & 3497 & 11.1  \\  
+ 1 & 3994 & 11.9 \\
+ 2 & 4511 & 13.0 \\
+ 3 & 4913 & 14.1 \\ 
+ ... & ... & ... \\ 
+ n & 2900 & 10.1
+\end{tabular}
+\end{center}
+
+$$y_n(x) = \sum_{k=0}^n {'} a_k T_k(x)$$
+$$a*cycles + b = hum + error$$
+$$f(a,b) = [hum_{0} - (a*cyclos_{0})]^{2} + [hum_{1} - (a*cyclos_{1})]^{2} + ... +  [hum_{n} - (a*cyclos_{n})]^{2}$$
+To minimize this distance function, we need to set all first partial derivatives to zero:
+%$$\[ \frac{\partial}{\partial a}*(f(a,b)) = 0$$
+%$$\[ \frac{\partial}{\partial b}(f(a,b)) = 0$$
+$$\frac{\partial}{\partial a}yo$$
+
+\section{Conclusion}
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
