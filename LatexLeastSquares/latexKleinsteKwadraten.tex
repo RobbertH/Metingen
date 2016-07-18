@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[portrait, margin=1.5in]{geometry}
+\usepackage{amsmath}
 
 \title{Least Squares approximation for humidity sensor}
 \author{Robbert Hofman}
@@ -38,24 +39,48 @@ a*cycles + b = hum + error
 \end{equation}
 The function that yealds the distance between the real and estimated humidities is denoted as follows
 \begin{equation}
-f(a,b) = [hum_{0} - (a*cyclos_{0})]^{2} + [hum_{1} - (a*cyclos_{1})]^{2}
-	 + ... +  [hum_{n} - (a*cyclos_{n})]^{2}
+f(a,b) = [hum_{0} - (a*cyclos_{0} + b)]^{2} + [hum_{1} - (a*cyclos_{1} + b)]^{2}
+	 + ... +  [hum_{n} - (a*cyclos_{n} + b)]^{2}
 \end{equation}
-%  \begin{multline}
-%hello
-%\end{multline}
-thats cool
-$$f(a,b) = [hum_{0} - (a*cyclos_{0})]^{2} + [hum_{1} - (a*cyclos_{1})]^{2} + ... +  [hum_{n} - (a*cyclos_{n})]^{2}$$
-To minimize this distance function, we need to set all first partial derivatives to zero:
+
 \begin{equation}
-%\frac{\partial}{\partial a}f(a,b) 1+1 =2 
+	f(a,b) = hum_{0}^{2} - 2*hum_{0}*(a*cyclos_{0}+b) + a^{2}*cyclos_{0}^{2} + 2*a*b*cyclos_{0}+b^{2} \newline
++ hum_{1}^{2} - 2*hum_{1}*(a*cyclos_{1}+b) + a^{2}*cyclos_{1}^{2} + 2*a*b*cyclos_{1}+b^{2}
++ ... 
++ hum_{n}^{2} - 2*hum_{0}*(a*cyclos_{n}+b) + a^{2}*cyclos_{n}^{2} + 2*a*b*cyclos_{n}+b^{2}
 \end{equation}
-%$$\[ \frac{\partial}{\partial a}*(f(a,b)) = 0$$
-%$$\[ \frac{\partial}{\partial b}(f(a,b)) = 0$$
-%$$\frac{\partial}{\partial a}yo$$
+
+To minimize this distance function, we need to set all first partial derivatives to zero: 
+\begin{subequations}
+	\begin{equation}
+		\frac{\partial}{\partial a}f(a,b) = 0 
+	\end{equation}
+	\begin{equation}
+		\frac{\partial}{\partial b}f(a,b) = 0 
+	\end{equation}
+\end{subequations}
+
+\begin{subequations}
+	\begin{equation}
+		\frac{\partial}{\partial a}f(a,b) = -2*hum_{0}*cyclos_{0} + 2*a*cyclos_{0}^{2} + 2*b*cyclos_{0}
+ -2*hum_{1}*cyclos_{1} + 2*a*cyclos_{1}^{2} + 2*b*cyclos_{1}
++ ...
+ -2*hum_{n}*cyclos_{n} + 2*a*cyclos_{n}^{2} + 2*b*cyclos_{n}
+	\end{equation}
+	\begin{equation}
+		\frac{\partial}{\partial b}f(a,b) = -2*hum_{0} + 2*a*cylos_{0} + 2*b 
+-2*hum_{1} + 2*a*cylos_{1} + 2*b 
++ ...
+-2*hum_{n} + 2*a*cylos_{n} + 2*b 
+	\end{equation}
+\end{subequations}
+
+\begin{subequations}
 \begin{equation}
-5 + 6 = 7 
-\end{equation}
+b = \frac{\sum_{i=0}^{n}{hum_{n}}}{n}
+\end{equation}•
+\end{subequations}•
+
 \section{Conclusion}
 Mathieu is nen tank
 \newpage
