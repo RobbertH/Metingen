@@ -1,22 +1,19 @@
 \documentclass{article}
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[portrait, margin=1.5in]{geometry}
 
-
-%\usepackage[A4, portrait, margin=1.5in]{geometry}
-
-
-
-\title{Least Squares}
+\title{Least Squares approximation for humidity sensor}
 \author{Robbert Hofman}
 \date{July 2016}
-
 
 \begin{document}
 
 \maketitle
 
 \section{Introduction}
-hum: humidity measured by gehaka; cycles: cycles measured by our meter
+In the table below, $hum$ stands for the humidity measured by a gehaka measuring device that is calibrated correctly. 
+This is the reference humidity that we are trying to calibrate on. 
+The variable $cycles$ is the amount of cycles measured by our device.
 
 \begin{center}
 \begin{tabular}{ c c c }
@@ -32,17 +29,53 @@ hum: humidity measured by gehaka; cycles: cycles measured by our meter
 \end{tabular}
 \end{center}
 
-$$y_n(x) = \sum_{k=0}^n {'} a_k T_k(x)$$
-$$a*cycles + b = hum + error$$
+\begin{equation}
+y_n(x) = \sum_{k=0}^n {'} a_k T_k(x)
+\end{equation}
+We will attempt to make a function of the following form, making the $error$ term as small as possible
+\begin{equation}
+a*cycles + b = hum + error
+\end{equation}
+The function that yealds the distance between the real and estimated humidities is denoted as follows
+\begin{equation}
+f(a,b) = [hum_{0} - (a*cyclos_{0})]^{2} + [hum_{1} - (a*cyclos_{1})]^{2}
+	 + ... +  [hum_{n} - (a*cyclos_{n})]^{2}
+\end{equation}
+%  \begin{multline}
+%hello
+%\end{multline}
+thats cool
 $$f(a,b) = [hum_{0} - (a*cyclos_{0})]^{2} + [hum_{1} - (a*cyclos_{1})]^{2} + ... +  [hum_{n} - (a*cyclos_{n})]^{2}$$
 To minimize this distance function, we need to set all first partial derivatives to zero:
+\begin{equation}
+%\frac{\partial}{\partial a}f(a,b) 1+1 =2 
+\end{equation}
 %$$\[ \frac{\partial}{\partial a}*(f(a,b)) = 0$$
 %$$\[ \frac{\partial}{\partial b}(f(a,b)) = 0$$
-$$\frac{\partial}{\partial a}yo$$
-
+%$$\frac{\partial}{\partial a}yo$$
+\begin{equation}
+5 + 6 = 7 
+\end{equation}
 \section{Conclusion}
+Mathieu is nen tank
+\newpage
 
+lol
+swag
+koe
+\newline
+bobs
 
-\bibliographystyle{plain}
-\bibliography{references}
+$45 + 6 =  \newline 7$
+
+\begin{equation}
+lol += equa \newline
+zeppers met bobellel zeoln ron osfdn sfdn dfn ndf gnd gofjgoisjgiprz gpir pjrep j = \hbox{} 5 *okpokpojlnonljnoiuoinoinlinoinouinolnouinlknoinljnooooooooooo
+\end{equation}
+yolo
+\hbox{\hbox{}}
+\hbox{\newline \newline }
+swag
+%\bibliographystyle{plain}
+%\bibliography{references}
 \end{document}
