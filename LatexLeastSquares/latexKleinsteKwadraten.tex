@@ -62,24 +62,31 @@ To minimize this distance function, we need to set all first partial derivatives
 
 \begin{subequations}
 	\begin{equation}
-		\frac{\partial}{\partial a}f(a,b) = -2*hum_{0}*cyclos_{0} + 2*a*cyclos_{0}^{2} + 2*b*cyclos_{0}
- -2*hum_{1}*cyclos_{1} + 2*a*cyclos_{1}^{2} + 2*b*cyclos_{1}
-+ ...
- -2*hum_{n}*cyclos_{n} + 2*a*cyclos_{n}^{2} + 2*b*cyclos_{n}
+		\begin{split}
+		\frac{\partial}{\partial a}f(a,b) = -2*hum_{0}*cyclos_{0} + 2*a*cyclos_{0}^{2} + 2*b*cyclos_{0} \\
+		 -2*hum_{1}*cyclos_{1} + 2*a*cyclos_{1}^{2} + 2*b*cyclos_{1} \\
+		+ \dots
+ 		-2*hum_{n}*cyclos_{n} + 2*a*cyclos_{n}^{2} + 2*b*cyclos_{n} \\
+		= 0
+		\end{split}
 	\end{equation}
 	\begin{equation}
-		\frac{\partial}{\partial b}f(a,b) = -2*hum_{0} + 2*a*cylos_{0} + 2*b 
--2*hum_{1} + 2*a*cylos_{1} + 2*b 
-+ ...
--2*hum_{n} + 2*a*cylos_{n} + 2*b 
+		\begin{split}
+			\frac{\partial}{\partial b}f(a,b) = -2*hum_{0} + 2*a*cylos_{0} + 2*b \\
+			-2*hum_{1} + 2*a*cylos_{1} + 2*b \\
+			+ \dots
+			-2*hum_{n} + 2*a*cylos_{n} + 2*b \\
+			= 0
+		\end{split}
 	\end{equation}
 \end{subequations}
 
+Or equivalently,
 \begin{subequations}
 \begin{equation}
-b = \frac{\sum_{i=0}^{n}{hum_{n}}}{n}
-\end{equation}•
-\end{subequations}•
+b = \frac{\sum_{i=0}^{n}{hum_{n}}}{n} = jeuleu
+\end{equation}
+\end{subequations}
 
 \section{Conclusion}
 Mathieu is nen tank
